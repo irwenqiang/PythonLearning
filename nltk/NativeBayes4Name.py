@@ -27,6 +27,7 @@ print nltk.classify.accuracy(classifier, devtest_set)
 errors = []
 
 for(name, tag) in devtest_names:
+    
     guess = classifier.classify(gender_features(name))
 
     if guess != tag:
